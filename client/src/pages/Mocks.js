@@ -14,23 +14,23 @@ function Mocks() {
 
   // Load all mocks and store them with setMocks
   useEffect(() => {
-    loadMocks()
+    // loadMocks()
   }, [])
 
   // Loads all mocks and sets them to mocks
   function loadMocks() {
-    API.getMocks()
-      .then(res => 
-        setMocks(res.data)
-      )
-      .catch(err => console.log(err));
+    // API.getMocks()
+    //   .then(res => 
+    //     setMocks(res.data)
+    //   )
+    //   .catch(err => console.log(err));
   };
 
   // Deletes a mock from the database with a given id, then reloads mocks from the db
   function deleteMock(id) {
-    API.deleteMock(id)
-      .then(res => loadMocks())
-      .catch(err => console.log(err));
+    // API.deleteMock(id)
+    //   .then(res => loadMocks())
+    //   .catch(err => console.log(err));
   }
 
   // Handles updating component state when the user types into the input field
@@ -42,16 +42,16 @@ function Mocks() {
   // When the form is submitted, use the API.saveBook method to save the mock data
   // Then reload mocks from the database
   function handleFormSubmit(event) {
-    event.preventDefault();
-    if (formObject.name) {
-      API.saveMock({
-        name: formObject.name
-        // other: formObject.other,
-        // other2: formObject.other2
-      })
-        .then(res => loadBooks())
-        .catch(err => console.log(err));
-    }
+    // event.preventDefault();
+    // if (formObject.name) {
+    //   API.saveMock({
+    //     name: formObject.name
+    //     // other: formObject.other,
+    //     // other2: formObject.other2
+    //   })
+    //     .then(res => loadBooks())
+    //     .catch(err => console.log(err));
+    // }
   };
 
   return (
